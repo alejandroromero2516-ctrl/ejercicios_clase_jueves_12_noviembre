@@ -1,7 +1,3 @@
-"""Estilo funcional: filtrar, transformar y agrupar.
-
-Equivalente a JavaStreams.java.
-"""
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -17,11 +13,9 @@ lista = [
     Personaje("Dara", "Mago", 12),
 ]
 
-# 3) removeIf (mas simple): conservar los que cumplen la condicion
 sin_debiles = [p for p in lista if p.nivel >= 5]
 print("Sin nivel < 5:", sin_debiles)
 
-# 4) Filtrar, transformar y agrupar
 fuertes = [p.nombre for p in lista if p.nivel >= 10]
 print("Fuertes:", fuertes)
 

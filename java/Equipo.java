@@ -8,6 +8,7 @@ public class Equipo {
     public void agregar(Personaje p) {
         miembros.add(p);
     }
+
     public List<Personaje> getMiembros() {
         return List.copyOf(miembros);
     }

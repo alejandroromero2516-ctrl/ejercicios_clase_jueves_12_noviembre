@@ -1,9 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * HashMap: operaciones esenciales con claves String.
- */
 public class JavaHashMap {
 
     public static void main(String[] args) {
@@ -11,14 +8,14 @@ public class JavaHashMap {
 
         puntos.put("Aria", 120);
         puntos.put("Borin", 80);
-        puntos.put("Aria", 150);                    // reemplaza el valor
+        puntos.put("Aria", 150);
 
-        System.out.println(puntos.get("Aria"));             // 150
-        System.out.println(puntos.getOrDefault("Zed", 0));  // 0
-        System.out.println(puntos.containsKey("Borin"));    // true
+        System.out.println(puntos.get("Aria"));
+        System.out.println(puntos.getOrDefault("Zed", 0));
+        System.out.println(puntos.containsKey("Borin"));
 
         puntos.putIfAbsent("Cael", 10);
-        puntos.merge("Cael", 5, Integer::sum);      // 15
+        puntos.merge("Cael", 5, Integer::sum);
         puntos.remove("Borin");
 
         for (Map.Entry<String, Integer> e : puntos.entrySet()) {

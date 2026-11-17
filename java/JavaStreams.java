@@ -3,9 +3,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Estilo funcional: streams para filtrar, transformar y agrupar.
- */
 public class JavaStreams {
 
     public static void main(String[] args) {
@@ -16,12 +13,10 @@ public class JavaStreams {
                 new Personaje("Dara", "Mago", 12)
         ));
 
-        // 3) removeIf (mas simple)
         List<Personaje> sinDebiles = new ArrayList<>(lista);
         sinDebiles.removeIf(p -> p.getNivel() < 5);
         System.out.println("Sin nivel < 5: " + sinDebiles);
 
-        // 4) Streams: filtrar, transformar, agrupar
         List<String> fuertes = lista.stream()
                 .filter(p -> p.getNivel() >= 10)
                 .map(Personaje::getNombre)
@@ -33,7 +28,6 @@ public class JavaStreams {
                 .average().orElse(0);
         System.out.println("Promedio de nivel: " + prom);
 
-        // Agrupar por clase con streams
         Map<String, List<String>> porClase = lista.stream()
                 .collect(Collectors.groupingBy(
                         Personaje::getClase,

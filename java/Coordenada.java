@@ -1,4 +1,5 @@
 import java.util.Objects;
+
 public class Coordenada {
 
     private final int x, y;
