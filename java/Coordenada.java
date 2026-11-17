@@ -1,11 +1,4 @@
 import java.util.Objects;
-
-/**
- * Coordenada (x, y) usada como clave de un Map.
- *
- * IMPORTANTE: sin equals y hashCode, HashMap no puede encontrar
- * una clave "igual" creada de nuevo, y mapa.get(...) devolveria null.
- */
 public class Coordenada {
 
     private final int x, y;
@@ -24,10 +17,5 @@ public class Coordenada {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
-    }
-
-    @Override
-    public String toString() {
-        return "(" + x + ", " + y + ")";
     }
 }
